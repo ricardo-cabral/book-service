@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Hyperion",
+    "author": "Dan Simmons",
+    "price": "20"
+  },
+  {
+    "id": 2,
+    "name": "A Fire Upon the Deep",
+    "author": "Vernor Vinge",
+    "price": "13"
+  },
+  {
+    "id": 3,
+    "name": "Harry Potter and the Goblet of Fire",
+    "author": "J. K. Rowling",
+    "price": "31"
+  },
+  {
+    "id": 4,
+    "name": "Ancillary Justice",
+    "author": "Ann Leckie",
+    "price": "29"
+  },
+  {
+    "id": 5,
+    "name": "A Deepness in the Sky",
+    "author": "Vernor Vinge",
+    "price": "15"
+  }
+]
