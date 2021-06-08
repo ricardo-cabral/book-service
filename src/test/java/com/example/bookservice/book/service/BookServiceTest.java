@@ -76,6 +76,12 @@ public class BookServiceTest {
   }
 
   @Test
+  public void shouldFindById(){
+    Book result = service.findById(1);
+    assertEquals(result.getAuthor(), "Dan Simmons");
+  }
+
+  @Test
   public void shouldTryToFindVingeAuthor_AndReturnEmpty() {
 
     final String author = "vinge";

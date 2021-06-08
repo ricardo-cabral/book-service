@@ -52,7 +52,7 @@ class BookServiceImpl implements BookService {
   }
 
   @Override
-  public boolean insertNewBook(Book book) {
+  public Book insertNewBook(Book book) {
     return repository.insertBook(book);
   }
 

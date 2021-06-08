@@ -12,11 +12,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 @Repository
 @Log
 public final class BookRepository {
+  private final AtomicInteger id = new AtomicInteger(10);
   private final List<Book> database = new ArrayList<>();
   private final Resource booksJson;
   private final ObjectMapper mapper;
@@ -42,8 +44,13 @@ public final class BookRepository {
     return this.database;
   }
 
-  public boolean insertBook(Book book) {
-    return this.database.add(book);
+  public Book insertBook(Book book) {
+
+    Book toPersist = new Book(id.incrementAndGet(), book.getName(), book.getAuthor(), book.getPrice());
+    if (!this.database.add(toPersist) ) {
+      throw new RuntimeException("Error inserting data");
+    }
+    return toPersist;
   }
 
 

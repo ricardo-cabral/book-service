@@ -16,7 +16,7 @@ public interface BookService {
 
   List<Book> findItemsByAuthorIgnoreCase(final String author);
 
-  boolean insertNewBook(Book book);
+  Book insertNewBook(Book book);
 
   boolean removeBook(int id);
 }
